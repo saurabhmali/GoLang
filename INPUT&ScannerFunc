@@ -1,0 +1,51 @@
+//2. Write a program to prompt the user to enter a name, and print “Hello <name>”. 
+//Replace “<name>” with the text entered by a user running the program. [Scan function, 2 hours]
+
+package main
+import "fmt"
+import "bufio"
+import "os"
+
+func main(){
+    
+    var name string
+    fmt.Print("Enter the name : ")
+    
+    //scan multiple words
+    scanner := bufio.NewScanner(os.Stdin)   //1 
+    scanner.Scan()                          //2
+    name = scanner.Text()                   //3
+    
+    //Function call and output return
+    fmt.Printf("Hello "+name)
+    
+}
+/*
+
+Program starts
+      ↓
+Print "Enter the name : "
+      ↓
+Wait for user input
+      ↓
+User types: Saurabh
+      ↓
+scanner reads the line...........2
+      ↓
+Text extracted using scanner.Text()...........3
+      ↓
+Stored in variable "name"............3
+      ↓
+Print the name
+
+*/
+
+//1. create a Scanner object that reads data from standard input (o.Stdin), which is the keyboard input in the terminal. and save it in the scanner object.
+//2. This tells scanner to initiate the scan
+//3. This This retrieves the text that Scan() just read.
+
+//NOTE: NewScanner is the function, inputs the os values and  returns the pointer to the Scanner struct.
+//NOTE : scanner is the variable which stores the pointer address. (*bufio.scanner)
+
+
+
