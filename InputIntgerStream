@@ -1,5 +1,6 @@
 //Take an input and create a slice.
-
+//NOTE :  Here you cannot use the scanner function and bufio as it read the input in string so here we will use
+//for loop and append the element in the slice.
 
 package main
 import "fmt"
