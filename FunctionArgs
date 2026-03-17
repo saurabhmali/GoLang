@@ -4,3 +4,24 @@ name to print in the message by replacing “<name>” with the given name. [Str
 operation, 4 hours]
 */
 
+package main
+import ("fmt";"os";"bufio")
+
+func Greetname(gt string, nm string){
+    fmt.Println(gt+nm+"!")
+}
+
+func main(){
+    
+    greeting := "Good Morning, "
+    var name string
+    
+    fmt.Print("Enter your name : ")
+    //input from the os
+    scanner := bufio.NewScanner(os.Stdin)
+    scanner.Scan()
+    name = scanner.Text()
+    
+    //Calling Function
+    Greetname(greeting,name)
+}
