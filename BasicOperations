@@ -1,0 +1,70 @@
+/*
+Extend program (5) to accept 3 inputs: “num1”, “num2” and “operation” where operation
+could be “+”, “-”, “*” or “/” to represent sum, difference, multiplication or division. The output
+will be output of “num1” <operation> “num2”. The output shall be “num1=<num1>
+num2=<num2> <operation>=<result>” where “<operation>” will be replaced by the
+operation name. Use “sum”, “difference”, “multiply” and “divide” as an operation name.
+[If/then/else OR switch statement, 3 hours]
+*/
+
+
+package main
+import ("fmt")
+
+//function logic
+var ans int
+
+func Addition(a int, b int){
+    ans  = a+b
+    fmt.Print("Addition is :",ans)
+}
+func Substraction(a int, b int){
+    ans  = a-b
+    fmt.Print("Substraction is :",ans)
+}
+func Multiplication(a int, b int){
+    ans  = a*b
+    fmt.Print("Multiplication is :",ans)
+}
+func Division(a int, b int){
+    ans  = a // b
+    fmt.Print("Division is :",ans)
+}
+
+
+
+func main(){
+    
+    var num1 int
+    var num2 int
+    var option int
+    
+    
+    
+    fmt.Print("Enter the 1st number : ")
+    fmt.Scan(&num1)
+    fmt.Print("Enter the 2nd number :")
+    fmt.Scan(&num2)
+    
+    
+    
+    // Operation
+    fmt.Println("Choose the operation : ")
+    fmt.Println("For Add type 1: ")
+    fmt.Println("For Sub type 2: ")
+    fmt.Println("For Mul type 3: ")
+    fmt.Println("For Div type 4: ")
+    fmt.Scan(&option)
+    
+    if option == 1{   
+        Addition(num1,num2)
+    } else if option==2 {                       //Mistake
+        Substraction(num1,num2)                 // see syntax
+    } else if option==3 {
+        Multiplication(num1,num2)
+    } else {
+        Division(num1,num2)
+    }
+}
+
+
