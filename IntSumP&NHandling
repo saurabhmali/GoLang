@@ -1,0 +1,7 @@
+/*
+5. Write a program to prompt the user for 2 inputs: num1 and num2 and generate a sum of two numbers as output.
+The program must accept only **whole numbers** (positive or negative) or
+throw an error. The output shall be “num1=<num1> num2=<num2> sum=<result>” where
+“<num1>”, “<num2>” and “<result>” will be replaced with actual value. [Basic expressions,
+2 hours]
+*/
