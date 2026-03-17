@@ -10,7 +10,7 @@ func FibonacciSeq(){
         a , b = b, a + b
     }
 }
-// Same no difference
+// Main Func would be same no difference
 func main(){
     FibonacciSeq()
 }
