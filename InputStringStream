@@ -1,0 +1,31 @@
+#GoLang String Input
+
+package main
+import "fmt"
+import "bufio"
+import "os"
+
+
+func main(){
+    
+    var name string
+    fmt.Print("Enter the name : ")
+    
+    //scan multiple words
+    scanner := bufio.NewScanner(os.Stdin)   //.........................1 NewScanner
+    scanner.Scan()                          //.........................2 Scan()
+    name = scanner.Text()                   //.........................3 Text()
+    
+    //Function call and output return
+    fmt.Printf("Hello "+name)
+    
+}
+
+
+//1. create a Scanner object that reads data from standard input (o.Stdin), which is the keyboard input in the terminal. and save it in the scanner object.
+//2. This tells scanner to initiate the scan
+//3. This This retrieves the text that Scan() just read.
+
+//NOTE: NewScanner is the function, inputs the os values and  returns the pointer to the Scanner struct.
+//NOTE : scanner is the variable which stores the pointer address. (*bufio.scanner)
+
