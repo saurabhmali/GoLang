@@ -1,0 +1,51 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)                         //Reads string input
+
+	fmt.Print("Enter a whole number: ")
+	scanner.Scan()                                                //Scans the number
+
+	input := strings.TrimSpace(scanner.Text())                    // Trims the white space
+
+	num, err := strconv.Atoi(input)                               // convverts the string
+	if err != nil {
+		fmt.Println("Error: Only whole numbers are allowed")
+		return
+	}
+
+	fmt.Println("Valid number:", num)
+}
+
+==========================================================================
+
+num, err := strconv.Atoi(input)                  ----->inputs one value and returns two values
+This function returns the two values :
+num --> the converted number
+err --> error, if conversion fails(else nil)
+
+AToi() =  Ascii To integer, convert "123" → 123
+
+==========================================================================
+//####ORR
+
+num, err := strconv.ParseInt(input, 10, 64)  --------------> inputs one value and returns tow values
+This lets you control:
+base (10, 2, 16…)
+bit size (8, 16, 32, 64)
+
+==========================================================================
+
+12.3      → float → rejected
+abc       → text → rejected
+12abc     → mixed → rejected
+""        → empty → rejected
+==========================================================================
