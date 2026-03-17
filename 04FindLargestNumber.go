@@ -4,7 +4,7 @@
 package main
 import "fmt"
 
-func LargestNumber(arr []int, lnum int){
+func LargestNumber(arr []int, lnum int){        // Passing array/scope as a argumnet
     
     for i:=0; i < len(arr); i++ {
         if arr[i] > lnum {
