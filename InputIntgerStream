@@ -1,6 +1,13 @@
 //Take an input and create a slice.
-//NOTE :  Here you cannot use the scanner function and bufio as it read the input in string so here we will use
+//NOTE:  Here, you cannot use the scanner function and bufio, as it reads the input in a string, so here we will use
 //for loop and append the element in the slice.
+
+
+//NOTE: When taking inpurt using the fmt.Scan() you always use the & operator to assign the value.
+//If using the scanner.Scan() no need to provide any argument.
+
+
+CODE:
 
 package main
 import "fmt"
