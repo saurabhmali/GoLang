@@ -1,9 +1,9 @@
-// Function Return in GO
+/*
+#Function Return in GO
 
-//NOTE: When you return something from go func, 
-//You are supposed to mention the dtype of the 
-//return variable in the function declaration.
-
+NOTE: When you return something from go func, You are supposed to mention the dtype of the 
+return variable in the function declaration.
+*/
 //import
 package main
 import "fmt"
