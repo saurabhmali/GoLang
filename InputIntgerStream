@@ -1,1 +1,25 @@
+//Take an input and create a slice.
 
+
+package main
+import "fmt"
+
+func main() {
+      
+      //input the length of slice
+      var num int
+      fmt.Print("Enter the number of elements: ")
+      fmt.Scan(&num)   
+      
+      
+      // Declare the Slice
+      arr := make([]int,0,num)           //slice declaration
+      fmt.Printf("Enter the %d element in seq :", num)   //No of element
+
+      for i:=0;i<num;i++{
+          var element int
+          fmt.Scan(&element)
+          arr = append(arr,element)      
+      }
+      
+      fmt.Print("Input Slice: ",arr )
