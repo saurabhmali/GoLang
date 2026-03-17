@@ -1,0 +1,54 @@
+/*5. Write a program to prompt the user for 2 inputs: num1 and num2 and generate a sum of two numbers as output. 
+The program must accept only whole numbers (positive or negative) or throw an error. 
+The output shall be “num1=<num1> num2=<num> sum=<result>” where “<num1>”, “<num2>” and “<result>” will be replaced with actual value. [Basic expressions,
+2 hours]
+*/
+
+
+package main
+import "fmt"
+import "os"
+import "bufio"
+import ("strconv")
+
+
+// Function for additon of two number
+func SumNum(a int, b int)int{
+    var sum int
+    sum = a + b
+    return sum
+}
+
+// we need to valudate  the wto intergers
+func main(){
+    scanner :=bufio.NewScanner(os.Stdin)
+    
+    var input1 string
+    var num1 int
+    
+    fmt.Print("Enter 1st number : ")
+    scanner.Scan()
+    input1 = scanner.Text()
+    num1, err := strconv.Atoi(input1)
+    if err != nil{
+        fmt.Println("ERROR: Please enter the whole number")
+        return
+    }
+    
+    var input2 string
+    var num2 int
+    fmt.Print("Enter the 2nd number : ")
+    scanner.Scan()
+    input2 = scanner.Text()
+    num2, err2 := strconv.Atoi(input2)
+    if err2 != nil{
+        fmt.Println("Error : Please enter the whole number.")
+    }
+    
+    var op int
+    
+    op = SumNum(num1,num2)
+    fmt.Println("Sum of two number is : ",op)
+    
+}
+
