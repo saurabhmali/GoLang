@@ -1,0 +1,6 @@
+/*4. Modify the above program to take two command-line parameters. The first is the string for
+the message template, like “Hello <name>” or any other template. The second is the actual
+name to print in the message by replacing “<name>” with the given name. [String
+operation, 4 hours]
+*/
+
